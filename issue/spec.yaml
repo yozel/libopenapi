@@ -1,0 +1,18 @@
+openapi: 3.0.2
+info:
+  title: "test"
+  version: "0.0.1"
+paths:
+  /hello:
+    post:
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ExternalRef"
+components:
+  schemas:
+    ExternalRef:
+      $ref: "spec-ext.yaml#/components/schemas/Foo"

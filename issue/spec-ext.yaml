@@ -1,0 +1,19 @@
+openapi: 3.0.2
+info:
+  title: "test"
+  version: "0.0.1"
+paths: {}
+components:
+  schemas:
+    Foo:
+      type: object
+      properties:
+        internalAttr:
+          type: string
+        externalAttr:
+          $ref: "#/components/schemas/Bar"
+    Bar:
+      type: object
+      properties:
+        id:
+          type: string
